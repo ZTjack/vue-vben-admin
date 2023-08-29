@@ -11,7 +11,7 @@ export default {
     tooltipEntryFull: 'Full Screen',
     tooltipExitFull: 'Exit Full Screen',
 
-    home: 'Home',
+    home: 'Home'
   },
   multipleTab: {
     reload: 'Refresh current',
@@ -19,7 +19,7 @@ export default {
     closeLeft: 'Close Left',
     closeRight: 'Close Right',
     closeOther: 'Close Other',
-    closeAll: 'Close All',
+    closeAll: 'Close All'
   },
   setting: {
     // content mode
@@ -101,6 +101,6 @@ export default {
     triggerHover: 'Hover',
     triggerClick: 'Click',
 
-    mixSidebarFixed: 'Fixed expanded menu',
-  },
+    mixSidebarFixed: 'Fixed expanded menu'
+  }
 }

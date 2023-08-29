@@ -3,7 +3,7 @@ import type {
   DrawerInstance,
   ReturnMethods,
   DrawerProps,
-  UseDrawerInnerReturnType,
+  UseDrawerInnerReturnType
 } from './typing'
 import {
   ref,
@@ -13,7 +13,7 @@ import {
   watchEffect,
   nextTick,
   toRaw,
-  computed,
+  computed
 } from 'vue'
 import { isProdMode } from '/@/utils/env'
 import { isFunction } from '/@/utils/is'
@@ -75,7 +75,7 @@ export function useDrawer(): UseDrawerReturnType {
 
     openDrawer: <T = any>(visible = true, data?: T, openOnSet = true): void => {
       getInstance()?.setDrawerProps({
-        visible: visible,
+        visible: visible
       })
       if (!data) return
 
@@ -91,7 +91,7 @@ export function useDrawer(): UseDrawerReturnType {
     },
     closeDrawer: () => {
       getInstance()?.setDrawerProps({ visible: false })
-    },
+    }
   }
 
   return [register, methods]
@@ -155,7 +155,7 @@ export const useDrawerInner = (callbackFn?: Fn): UseDrawerInnerReturnType => {
 
       setDrawerProps: (props: Partial<DrawerProps>) => {
         getInstance()?.setDrawerProps(props)
-      },
-    },
+      }
+    }
   ]
 }

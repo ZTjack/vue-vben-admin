@@ -12,7 +12,7 @@ import { useI18n } from '/@/hooks/web/useI18n'
 export function useTabDropdown(tabContentProps: TabContentProps, getIsTabs: ComputedRef<boolean>) {
   const state = reactive({
     current: null as Nullable<RouteLocationNormalized>,
-    currentIndex: 0,
+    currentIndex: 0
   })
 
   const { t } = useI18n()
@@ -54,41 +54,41 @@ export function useTabDropdown(tabContentProps: TabContentProps, getIsTabs: Comp
         icon: 'ion:reload-sharp',
         event: MenuEventEnum.REFRESH_PAGE,
         text: t('layout.multipleTab.reload'),
-        disabled: refreshDisabled,
+        disabled: refreshDisabled
       },
       {
         icon: 'clarity:close-line',
         event: MenuEventEnum.CLOSE_CURRENT,
         text: t('layout.multipleTab.close'),
         disabled: !!meta?.affix || disabled,
-        divider: true,
+        divider: true
       },
       {
         icon: 'line-md:arrow-close-left',
         event: MenuEventEnum.CLOSE_LEFT,
         text: t('layout.multipleTab.closeLeft'),
         disabled: closeLeftDisabled,
-        divider: false,
+        divider: false
       },
       {
         icon: 'line-md:arrow-close-right',
         event: MenuEventEnum.CLOSE_RIGHT,
         text: t('layout.multipleTab.closeRight'),
         disabled: closeRightDisabled,
-        divider: true,
+        divider: true
       },
       {
         icon: 'dashicons:align-center',
         event: MenuEventEnum.CLOSE_OTHER,
         text: t('layout.multipleTab.closeOther'),
-        disabled: disabled || !isCurItem,
+        disabled: disabled || !isCurItem
       },
       {
         icon: 'clarity:minus-line',
         event: MenuEventEnum.CLOSE_ALL,
         text: t('layout.multipleTab.closeAll'),
-        disabled: disabled,
-      },
+        disabled: disabled
+      }
     ]
 
     return dropMenuList

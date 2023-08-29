@@ -11,7 +11,7 @@ import {
   PROJ_CFG_KEY,
   APP_LOCAL_CACHE_KEY,
   APP_SESSION_CACHE_KEY,
-  MULTIPLE_TABS_KEY,
+  MULTIPLE_TABS_KEY
 } from '/@/enums/cacheEnum'
 import { DEFAULT_CACHE_TIME } from '/@/settings/encryptionSetting'
 import { toRaw } from 'vue'
@@ -98,7 +98,7 @@ window.addEventListener('beforeunload', function () {
   // TOKEN_KEY 在登录或注销时已经写入到storage了，此处为了解决同时打开多个窗口时token不同步的问题
   ss.set(APP_SESSION_CACHE_KEY, {
     ...omit(sessionMemory.getCache),
-    ...pick(ss.get(APP_SESSION_CACHE_KEY), [TOKEN_KEY, USER_INFO_KEY]),
+    ...pick(ss.get(APP_SESSION_CACHE_KEY), [TOKEN_KEY, USER_INFO_KEY])
   })
 })
 

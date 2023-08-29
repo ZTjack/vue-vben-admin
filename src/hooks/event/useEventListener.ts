@@ -19,7 +19,7 @@ export function useEventListener({
   options,
   autoRemove = true,
   isDebounce = true,
-  wait = 80,
+  wait = 80
 }: UseEventParams): { removeEvent: RemoveEventFn } {
   /* eslint-disable-next-line */
   let remove: RemoveEventFn = () => {}
@@ -46,7 +46,7 @@ export function useEventListener({
           })
         }
       },
-      { immediate: true },
+      { immediate: true }
     )
 
     remove = () => {

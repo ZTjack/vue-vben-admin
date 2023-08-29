@@ -16,7 +16,7 @@ export const modalProps = {
   cancelText: { type: String, default: t('common.cancelText') },
   okText: { type: String, default: t('common.okText') },
 
-  closeFunc: Function as PropType<() => Promise<boolean>>,
+  closeFunc: Function as PropType<() => Promise<boolean>>
 }
 
 export const basicProps = Object.assign({}, modalProps, {
@@ -79,5 +79,5 @@ export const basicProps = Object.assign({}, modalProps, {
 
   wrapClassName: { type: String },
 
-  zIndex: { type: Number },
+  zIndex: { type: Number }
 })

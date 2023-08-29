@@ -37,7 +37,7 @@ export const useUserStore = defineStore({
     // Whether the login expired
     sessionTimeout: false,
     // Last fetch time
-    lastUpdateTime: 0,
+    lastUpdateTime: 0
   }),
   getters: {
     getUserInfo(): UserInfo {
@@ -54,7 +54,7 @@ export const useUserStore = defineStore({
     },
     getLastUpdateTime(): number {
       return this.lastUpdateTime
-    },
+    }
   },
   actions: {
     setToken(info: string | undefined) {
@@ -86,7 +86,7 @@ export const useUserStore = defineStore({
       params: LoginParams & {
         goHome?: boolean
         mode?: ErrorMessageMode
-      },
+      }
     ): Promise<GetUserInfoModel | null> {
       try {
         const { goHome = true, mode, ...loginParams } = params
@@ -165,10 +165,10 @@ export const useUserStore = defineStore({
         content: () => h('span', t('sys.app.logoutMessage')),
         onOk: async () => {
           await this.logout(true)
-        },
+        }
       })
-    },
-  },
+    }
+  }
 })
 
 // Need to be used outside the setup

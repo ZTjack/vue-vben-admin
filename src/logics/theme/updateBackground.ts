@@ -38,8 +38,8 @@ export function updateHeaderBgColor(color?: string) {
 
   appStore.setProjectConfig({
     headerSetting: {
-      theme: isDark || darkMode ? ThemeEnum.DARK : ThemeEnum.LIGHT,
-    },
+      theme: isDark || darkMode ? ThemeEnum.DARK : ThemeEnum.LIGHT
+    }
   })
 }
 
@@ -69,7 +69,7 @@ export function updateSidebarBgColor(color?: string) {
 
   appStore.setProjectConfig({
     menuSetting: {
-      theme: isLight && !darkMode ? ThemeEnum.LIGHT : ThemeEnum.DARK,
-    },
+      theme: isLight && !darkMode ? ThemeEnum.LIGHT : ThemeEnum.DARK
+    }
   })
 }

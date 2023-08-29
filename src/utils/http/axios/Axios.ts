@@ -72,7 +72,7 @@ export class VAxios {
       requestInterceptors,
       requestInterceptorsCatch,
       responseInterceptors,
-      responseInterceptorsCatch,
+      responseInterceptorsCatch
     } = transform
 
     const axiosCanceler = new AxiosCanceler()
@@ -151,8 +151,8 @@ export class VAxios {
       headers: {
         'Content-type': ContentTypeEnum.FORM_DATA,
         // @ts-ignore
-        ignoreCancelToken: true,
-      },
+        ignoreCancelToken: true
+      }
     })
   }
 
@@ -171,7 +171,7 @@ export class VAxios {
 
     return {
       ...config,
-      data: qs.stringify(config.data, { arrayFormat: 'brackets' }),
+      data: qs.stringify(config.data, { arrayFormat: 'brackets' })
     }
   }
 

@@ -22,8 +22,8 @@ export function useSiderEvent() {
   function onBreakpointChange(broken: boolean) {
     appStore.setProjectConfig({
       menuSetting: {
-        siderHidden: broken,
-      },
+        siderHidden: broken
+      }
     })
   }
 
@@ -51,7 +51,7 @@ export function useTrigger(getIsMobile: Ref<boolean>) {
       return {}
     }
     return {
-      trigger: null,
+      trigger: null
     }
   })
 

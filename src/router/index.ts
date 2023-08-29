@@ -22,7 +22,7 @@ export const router = createRouter({
   routes: basicRoutes as unknown as RouteRecordRaw[],
   // 是否应该禁止尾部斜杠。默认为假
   strict: true,
-  scrollBehavior: () => ({ left: 0, top: 0 }),
+  scrollBehavior: () => ({ left: 0, top: 0 })
 })
 
 // reset router

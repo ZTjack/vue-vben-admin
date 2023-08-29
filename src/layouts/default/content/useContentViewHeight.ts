@@ -27,7 +27,7 @@ export function useContentViewHeight() {
       contentHeight.value = window.innerHeight
     },
     100,
-    { immediate: true },
+    { immediate: true }
   )
 
   async function setPageHeight(height: number) {
@@ -37,6 +37,6 @@ export function useContentViewHeight() {
   createPageContext({
     contentHeight: getViewHeight,
     setPageHeight,
-    pageHeight,
+    pageHeight
   })
 }

@@ -69,18 +69,18 @@ const ClickOutside: ObjectDirective = {
   beforeMount(el, binding) {
     nodeList.set(el, {
       documentHandler: createDocumentHandler(el, binding),
-      bindingFn: binding.value,
+      bindingFn: binding.value
     })
   },
   updated(el, binding) {
     nodeList.set(el, {
       documentHandler: createDocumentHandler(el, binding),
-      bindingFn: binding.value,
+      bindingFn: binding.value
     })
   },
   unmounted(el) {
     nodeList.delete(el)
-  },
+  }
 }
 
 export default ClickOutside

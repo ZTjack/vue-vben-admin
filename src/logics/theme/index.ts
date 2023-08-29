@@ -8,10 +8,10 @@ export async function changeTheme(color: string) {
     mixDarken,
     mixLighten,
     tinycolor,
-    color,
+    color
   })
 
   return await replaceStyleVariables({
-    colorVariables: [...getThemeColors(color), ...colors],
+    colorVariables: [...getThemeColors(color), ...colors]
   })
 }

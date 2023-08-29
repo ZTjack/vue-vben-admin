@@ -71,9 +71,9 @@ export function transformRouteToMenu(routeModList: AppRouteModule[], routerMappi
         name: title,
         hideMenu,
         path: node.path,
-        ...(node.redirect ? { redirect: node.redirect } : {}),
+        ...(node.redirect ? { redirect: node.redirect } : {})
       }
-    },
+    }
   })
   // 路径处理
   joinParentPath(list)

@@ -122,7 +122,7 @@ export function useMenuSetting() {
 
   function toggleCollapsed() {
     setMenuSetting({
-      collapsed: !unref(getCollapsed),
+      collapsed: !unref(getCollapsed)
     })
   }
   return {
@@ -159,6 +159,6 @@ export function useMenuSetting() {
     getCloseMixSidebarOnChange,
     getMixSideTrigger,
     getMixSideFixed,
-    mixSideHasChildren,
+    mixSideHasChildren
   }
 }

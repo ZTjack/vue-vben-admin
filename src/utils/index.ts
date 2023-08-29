@@ -43,7 +43,7 @@ export function deepMerge<T = any>(src: any = {}, target: any = {}): T {
 
 export function openWindow(
   url: string,
-  opt?: { target?: TargetContext | string; noopener?: boolean; noreferrer?: boolean },
+  opt?: { target?: TargetContext | string; noopener?: boolean; noreferrer?: boolean }
 ) {
   const { target = '__blank', noopener = true, noreferrer = true } = opt || {}
   const feature: string[] = []
@@ -74,9 +74,9 @@ export function getRawRoute(route: RouteLocationNormalized): RouteLocationNormal
       ? matched.map((item) => ({
           meta: item.meta,
           name: item.name,
-          path: item.path,
+          path: item.path
         }))
-      : undefined) as RouteRecordNormalized[],
+      : undefined) as RouteRecordNormalized[]
   }
 }
 

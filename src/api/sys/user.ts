@@ -8,7 +8,7 @@ enum Api {
   Logout = '/logout',
   GetUserInfo = '/getUserInfo',
   GetPermCode = '/getPermCode',
-  TestRetry = '/testRetry',
+  TestRetry = '/testRetry'
 }
 
 /**
@@ -18,11 +18,11 @@ export function loginApi(params: LoginParams, mode: ErrorMessageMode = 'modal') 
   return defHttp.post<LoginResultModel>(
     {
       url: Api.Login,
-      params,
+      params
     },
     {
-      errorMessageMode: mode,
-    },
+      errorMessageMode: mode
+    }
   )
 }
 
@@ -48,8 +48,8 @@ export function testRetry() {
       retryRequest: {
         isOpenRetry: true,
         count: 5,
-        waitTime: 1000,
-      },
-    },
+        waitTime: 1000
+      }
+    }
   )
 }

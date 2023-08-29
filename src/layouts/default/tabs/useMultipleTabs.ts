@@ -36,7 +36,7 @@ export function initAffixTabs(): string[] {
       tabStore.addTab({
         meta: tab.meta,
         name: tab.name,
-        path: tab.path,
+        path: tab.path
       } as unknown as RouteLocationNormalized)
     }
   }
@@ -57,7 +57,7 @@ export function useTabsDrag(affixTextList: string[]) {
   nextTick(() => {
     if (!multiTabsSetting.canDrag) return
     const el = document.querySelectorAll(
-      `.${prefixCls} .ant-tabs-nav-wrap > div`,
+      `.${prefixCls} .ant-tabs-nav-wrap > div`
     )?.[0] as HTMLElement
     const { initSortable } = useSortable(el, {
       filter: (e: ChangeEvent) => {
@@ -73,7 +73,7 @@ export function useTabsDrag(affixTextList: string[]) {
         }
 
         tabStore.sortTabs(oldIndex, newIndex)
-      },
+      }
     })
     initSortable()
   })

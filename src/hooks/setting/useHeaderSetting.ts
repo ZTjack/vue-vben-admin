@@ -40,7 +40,7 @@ export function useHeaderSetting() {
     getShowHeaderTrigger,
     getIsSidebarType,
     getIsMixSidebar,
-    getIsTopMenu,
+    getIsTopMenu
   } = useMenuSetting()
   const { getShowBreadCrumb, getShowLogo } = useRootSetting()
 
@@ -97,6 +97,6 @@ export function useHeaderSetting() {
     getShowFullHeaderRef,
     getShowInsetHeaderRef,
     getUnFixedAndFull,
-    getHeaderBgColor,
+    getHeaderBgColor
   }
 }

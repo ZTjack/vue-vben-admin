@@ -64,6 +64,6 @@ export function useLocale() {
     getLocale,
     getShowLocalePicker,
     changeLocale,
-    getAntdLocale,
+    getAntdLocale
   }
 }

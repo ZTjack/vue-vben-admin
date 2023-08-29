@@ -18,7 +18,7 @@ interface LocaleState {
 export const useLocaleStore = defineStore({
   id: 'app-locale',
   state: (): LocaleState => ({
-    localInfo: lsLocaleSetting,
+    localInfo: lsLocaleSetting
   }),
   getters: {
     getShowPicker(): boolean {
@@ -26,7 +26,7 @@ export const useLocaleStore = defineStore({
     },
     getLocale(): LocaleType {
       return this.localInfo?.locale ?? 'zh_CN'
-    },
+    }
   },
   actions: {
     /**
@@ -43,10 +43,10 @@ export const useLocaleStore = defineStore({
     initLocale() {
       this.setLocaleInfo({
         ...localeSetting,
-        ...this.localInfo,
+        ...this.localInfo
       })
-    },
-  },
+    }
+  }
 })
 
 // Need to be used outside the setup

@@ -3,7 +3,7 @@ import type {
   HeaderSetting,
   MenuSetting,
   TransitionSetting,
-  MultiTabsSetting,
+  MultiTabsSetting
 } from '/#/config'
 import type { BeforeMiniState } from '/#/store'
 
@@ -33,7 +33,7 @@ export const useAppStore = defineStore({
     darkMode: undefined,
     pageLoading: false,
     projectConfig: Persistent.getLocal(PROJ_CFG_KEY),
-    beforeMiniInfo: {},
+    beforeMiniInfo: {}
   }),
   getters: {
     getPageLoading(): boolean {
@@ -62,7 +62,7 @@ export const useAppStore = defineStore({
     },
     getMultiTabsSetting(): MultiTabsSetting {
       return this.getProjectConfig.multiTabsSetting
-    },
+    }
   },
   actions: {
     setPageLoading(loading: boolean): void {
@@ -98,8 +98,8 @@ export const useAppStore = defineStore({
         this.setPageLoading(loading)
         clearTimeout(timeId)
       }
-    },
-  },
+    }
+  }
 })
 
 // Need to be used outside the setup

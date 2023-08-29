@@ -7,7 +7,7 @@ import {
   SettingFooter,
   SwitchItem,
   SelectItem,
-  InputNumberItem,
+  InputNumberItem
 } from './components'
 
 import { AppDarkModeToggle } from '/@/components/Application'
@@ -30,13 +30,13 @@ import {
   getMenuTriggerOptions,
   routerTransitionOptions,
   menuTypeList,
-  mixSidebarTriggerOptions,
+  mixSidebarTriggerOptions
 } from './enum'
 
 import {
   HEADER_PRESET_BG_COLOR_LIST,
   SIDE_BAR_BG_COLOR_LIST,
-  APP_PRESET_COLOR_LIST,
+  APP_PRESET_COLOR_LIST
 } from '/@/settings/designSetting'
 
 const { t } = useI18n()
@@ -54,7 +54,7 @@ export default defineComponent({
       getColorWeak,
       getGrayMode,
       getShowDarkModeToggle,
-      getThemeColor,
+      getThemeColor
     } = useRootSetting()
 
     const { getOpenPageLoading, getBasicTransition, getEnableTransition, getOpenNProgress } =
@@ -78,14 +78,14 @@ export default defineComponent({
       getIsMixSidebar,
       getCloseMixSidebarOnChange,
       getMixSideTrigger,
-      getMixSideFixed,
+      getMixSideFixed
     } = useMenuSetting()
 
     const {
       getShowHeader,
       getFixed: getHeaderFixed,
       getHeaderBgColor,
-      getShowSearch,
+      getShowSearch
     } = useHeaderSetting()
 
     const { getShowMultipleTab, getShowQuick, getShowRedo, getShowFold } = useMultipleTabSetting()
@@ -103,7 +103,7 @@ export default defineComponent({
               baseHandler(HandlerEnum.CHANGE_LAYOUT, {
                 mode: item.mode,
                 type: item.type,
-                split: unref(getIsHorizontal) ? false : undefined,
+                split: unref(getIsHorizontal) ? false : undefined
               })
             }}
             def={unref(getMenuType)}
@@ -411,5 +411,5 @@ export default defineComponent({
         <SettingFooter />
       </BasicDrawer>
     )
-  },
+  }
 })

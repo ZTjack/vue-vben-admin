@@ -5,7 +5,7 @@ import {
   reactive,
   readonly as defineReadonly,
   // defineComponent,
-  UnwrapRef,
+  UnwrapRef
 } from 'vue'
 
 export interface CreateContextOptions {
@@ -21,7 +21,7 @@ type ShallowUnwrap<T> = {
 export function createContext<T>(
   context: any,
   key: InjectionKey<T> = Symbol(),
-  options: CreateContextOptions = {},
+  options: CreateContextOptions = {}
 ) {
   const { readonly = true, createProvider = false, native = false } = options
 
@@ -30,7 +30,7 @@ export function createContext<T>(
   !createProvider && provide(key, native ? context : provideData)
 
   return {
-    state,
+    state
   }
 }
 
@@ -38,7 +38,7 @@ export function useContext<T>(key: InjectionKey<T>, native?: boolean): T
 
 export function useContext<T>(
   key: InjectionKey<T> = Symbol(),
-  defaultValue?: any,
+  defaultValue?: any
 ): ShallowUnwrap<T> {
   return inject(key, defaultValue || {})
 }

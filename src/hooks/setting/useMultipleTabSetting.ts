@@ -23,6 +23,6 @@ export function useMultipleTabSetting() {
     getShowMultipleTab,
     getShowQuick,
     getShowRedo,
-    getShowFold,
+    getShowFold
   }
 }

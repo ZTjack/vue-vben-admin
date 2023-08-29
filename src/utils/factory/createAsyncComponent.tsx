@@ -1,5 +1,5 @@
 import {
-  defineAsyncComponent,
+  defineAsyncComponent
   // FunctionalComponent, CSSProperties
 } from 'vue'
 import { Spin } from 'ant-design-vue'
@@ -58,6 +58,6 @@ export function createAsyncComponent(loader: Fn, options: Options = {}) {
             // one of them must be called for the error handling to continue.
             fail()
           }
-        },
+        }
   })
 }

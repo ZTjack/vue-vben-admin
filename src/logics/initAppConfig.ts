@@ -35,7 +35,7 @@ export function initAppConfigStore() {
     themeColor,
 
     headerSetting: { bgColor: headerBgColor } = {},
-    menuSetting: { bgColor } = {},
+    menuSetting: { bgColor } = {}
   } = projCfg
   try {
     if (themeColor && themeColor !== primaryColor) {

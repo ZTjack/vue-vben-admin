@@ -125,7 +125,7 @@ const transform: AxiosTransform = {
         if (joinParamsToUrl) {
           config.url = setObjToUrlParams(
             config.url as string,
-            Object.assign({}, config.params, config.data),
+            Object.assign({}, config.params, config.data)
           )
         }
       } else {
@@ -200,7 +200,7 @@ const transform: AxiosTransform = {
       // @ts-ignore
       retryRequest.retry(axiosInstance, error)
     return Promise.reject(error)
-  },
+  }
 }
 
 function createAxios(opt?: Partial<CreateAxiosOptions>) {
@@ -248,12 +248,12 @@ function createAxios(opt?: Partial<CreateAxiosOptions>) {
           retryRequest: {
             isOpenRetry: true,
             count: 5,
-            waitTime: 100,
-          },
-        },
+            waitTime: 100
+          }
+        }
       },
-      opt || {},
-    ),
+      opt || {}
+    )
   )
 }
 export const defHttp = createAxios()
