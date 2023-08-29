@@ -16,7 +16,7 @@ function pathResolve(dir: string) {
 const { dependencies, devDependencies, name, version } = pkg
 const __APP_INFO__ = {
   pkg: { dependencies, devDependencies, name, version },
-  lastBuildTime: dayjs().format('YYYY-MM-DD HH:mm:ss'),
+  lastBuildTime: dayjs().format('YYYY-MM-DD HH:mm:ss')
 }
 
 export default ({ command, mode }: ConfigEnv): UserConfig => {
@@ -38,30 +38,31 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       alias: [
         {
           find: 'vue-i18n',
-          replacement: 'vue-i18n/dist/vue-i18n.cjs.js',
+          replacement: 'vue-i18n/dist/vue-i18n.cjs.js'
         },
         // /@/xxxx => src/xxxx
         {
           find: /\/@\//,
-          replacement: pathResolve('src') + '/',
+          replacement: pathResolve('src') + '/'
         },
         // /#/xxxx => types/xxxx
         {
           find: /\/#\//,
-          replacement: pathResolve('types') + '/',
-        },
-      ],
+          replacement: pathResolve('types') + '/'
+        }
+      ]
     },
     server: {
+      open: true,
       https: true,
       // Listening on all local IPs
       host: true,
       port: VITE_PORT,
       // Load proxy configuration from .env
-      proxy: createProxy(VITE_PROXY),
+      proxy: createProxy(VITE_PROXY)
     },
     esbuild: {
-      pure: VITE_DROP_CONSOLE ? ['console.log', 'debugger'] : [],
+      pure: VITE_DROP_CONSOLE ? ['console.log', 'debugger'] : []
     },
     build: {
       target: 'es2015',
@@ -80,22 +81,22 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       // },
       // Turning off brotliSize display can slightly reduce packaging time
       brotliSize: false,
-      chunkSizeWarningLimit: 2000,
+      chunkSizeWarningLimit: 2000
     },
     define: {
       // setting vue-i18-next
       // Suppress warning
       __INTLIFY_PROD_DEVTOOLS__: false,
-      __APP_INFO__: JSON.stringify(__APP_INFO__),
+      __APP_INFO__: JSON.stringify(__APP_INFO__)
     },
 
     css: {
       preprocessorOptions: {
         less: {
           modifyVars: generateModifyVars(),
-          javascriptEnabled: true,
-        },
-      },
+          javascriptEnabled: true
+        }
+      }
     },
 
     // The vite plugin used by the project. The quantity is large, so it is separately extracted and managed
@@ -108,8 +109,8 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
         '@vue/shared',
         '@iconify/iconify',
         'ant-design-vue/es/locale/zh_CN',
-        'ant-design-vue/es/locale/en_US',
-      ],
-    },
+        'ant-design-vue/es/locale/en_US'
+      ]
+    }
   }
 }
